@@ -89,7 +89,7 @@
 	<link rel='stylesheet' id='contact-form-7-css'
 		href='wp-content/plugins/contact-form-7/includes/css/styles7661.css?ver=5.4.2' type='text/css' media='all' />
 	<style id='pix-intro-handle-inline-css' type='text/css'>
-		@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,700;1,200&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,700;1,200&display=swap');
 		body, p {
 			font-family: 'Montserrat', sans-serif;
 			font-size: 15px; !important;
@@ -140,7 +140,7 @@
 			border: none;
 			color: #FFF;
 			border-radius: 2em;
-			padding: 0px 50px;
+			padding: 5px 60px;
 			overflow: hidden;
 			-webkit-user-select: none;
 			-moz-user-select: none;
@@ -187,6 +187,7 @@
 			color: white !important;
 			font-size: 18px;
 			font-family: "Montserrat", sans-serif;
+			font-weight: 400 !important;
 		}
 
 		ul {
@@ -385,13 +386,13 @@
 																		data-anim-delay="400"
 																		data-anim-type="fade-in-up">A unique event for the alumni of MSB by HSB Rajkot under the auspices of ITNC Mumbai.</span></p>
 															</div>
-															<div class="pix-el-text slide-in-container w-100  ">
+															<!-- <div class="pix-el-text slide-in-container w-100  ">
 																<p class="text-24  text-white  "><span
 																		class="animate-in d-inline-block"
 																		data-anim-delay="400"
 																		data-anim-type="fade-in-up">Kindly register at attaiseerulburhani (if you have not registered ever before) and then register for this upcoming event using the HSB Taaruf Programme Tab.</span>
 																</p>
-															</div>
+															</div> -->
 															<div class="row mt-3">
 																<div class="col-lg-8 col-md-12 col-sm-12 justify-content-center">
 																	<p style="font-weight: bold; font-size: 16px;margin: 0; margin-top: 3px;">HAPPENING ON</p>
