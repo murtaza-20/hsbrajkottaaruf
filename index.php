@@ -491,22 +491,35 @@
 																		<div class="form-group">
 																			<label for="farig_msb_location">Farig MSB Location</label>
 																			<select class="custom-select" id="farig_msb_location" name="farig_msb_location" style="font-family: 'Helvetica';border: 3px solid #fcb4b0;border-radius: 30px;height: 45px;">
-																				<option>Rajkot</option>
-																				<option>Mumbai</option>
+																				<option value="Banglore">Banglore</option>
+																				<option value="Banswara">Banswara</option>
+																				<option value="Bhopal">Bhopal</option>
+																				<option value="Chennai">Chennai</option>
+																				<option value="Godhra">Godhra</option>
+																				<option value="Indore">Indore</option>
+																				<option value="Kolkata">Kolkata</option>
+																				<option value="Mumbai">Mumbai</option>
+																				<option value="Nagpur">Nagpur</option>
+																				<option value="Nasik">Nasik</option>
+																				<option value="Pune">Pune</option>
+																				<option value="Raipur">Raipur</option>
+																				<option value="Rajkot">Rajkot</option>
+																				<option value="Secunderabad">Secunderabad</option>
 																			</select>
 																		</div>
 
 																		<div class="form-group">
 																			<label for="Batch Year">Batch Year</label>
 																			<select class="custom-select" id="batch_year" name="batch_year" style="font-family: 'Helvetica';border: 3px solid #fcb4b0;border-radius: 30px;height: 45px;">
-																				<option>2000</option>
-																				<option>2001</option>
-																				<option>2002</option>
-																				<option>2003</option>
-																				<option>2004</option>
-																				<option>2005</option>
-																				<option>2006</option>
-																				<option>2007</option>
+																				<option value="2010">2010</option>
+																				<option value="2011">2011</option>
+																				<option value="2012">2012</option>
+																				<option value="2013">2013</option>
+																				<option value="2014">2014</option>
+																				<option value="2015">2015</option>
+																				<option value="2016">2016</option>
+																				<option value="2017">2017</option>
+																				<option value="2018">2018</option>
 																			</select>
 																		</div>
 																		
