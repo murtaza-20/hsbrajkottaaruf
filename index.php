@@ -644,7 +644,6 @@
 			}
 		}
 	</style>
-		href='wp-content/plugins/pixfort-likes/styles/pixfort-likesf658.css?ver=5.8.1' type='text/css' media='all' />
 	<link rel='stylesheet' id='pixfort-likes-odometer-css'
 		href='wp-content/plugins/pixfort-likes/styles/odometer-theme-defaultf658.css?ver=5.8.1' type='text/css'
 		media='all' />
