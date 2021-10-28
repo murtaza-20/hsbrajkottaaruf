@@ -1,10 +1,5 @@
 <!doctype html>
 <html lang="en-US">
-<!-- Mirrored from www.jasmtsc.in/taaruf/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Oct 2021 22:11:20 GMT -->
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-<!-- /Added by HTTrack -->
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
@@ -13,63 +8,6 @@
 	<title>Moments &#8211; Create and Relish</title>
 	<meta name='robots' content='max-image-preview:large' />
 	<link rel='dns-prefetch' href='http://s.w.org/' />
-	<script type="text/javascript">
-		window._wpemojiSettings = {
-			"baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/",
-			"ext": ".png",
-			"svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/",
-			"svgExt": ".svg",
-			"source": {
-				"concatemoji": "https:\/\/www.jasmtsc.in\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.1"
-			}
-		};
-		! function (e, a, t) {
-			var n, r, o, i = a.createElement("canvas"),
-				p = i.getContext && i.getContext("2d");
-
-			function s(e, t) {
-				var a = String.fromCharCode;
-				p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, e), 0, 0);
-				e = i.toDataURL();
-				return p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, t), 0, 0), e === i.toDataURL()
-			}
-
-			function c(e) {
-				var t = a.createElement("script");
-				t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t)
-			}
-			for (o = Array("flag", "emoji"), t.supports = {
-					everything: !0,
-					everythingExceptFlag: !0
-				}, r = 0; r < o.length; r++) t.supports[o[r]] = function (e) {
-				if (!p || !p.fillText) return !1;
-				switch (p.textBaseline = "top", p.font = "600 32px Arial", e) {
-					case "flag":
-						return s([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) ? !1 : !s([55356,
-							56826, 55356, 56819
-						], [55356, 56826, 8203, 55356, 56819]) && !s([55356, 57332, 56128, 56423, 56128, 56418, 56128,
-							56421, 56128, 56430, 56128, 56423, 56128, 56447
-						], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128,
-							56430, 8203, 56128, 56423, 8203, 56128, 56447
-						]);
-					case "emoji":
-						return !s([10084, 65039, 8205, 55357, 56613], [10084, 65039, 8203, 55357, 56613])
-				}
-				return !1
-			}(o[r]), t.supports.everything = t.supports.everything && t.supports[o[r]], "flag" !== o[r] && (t.supports
-				.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[o[r]]);
-			t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t
-				.readyCallback = function () {
-					t.DOMReady = !0
-				}, t.supports.everything || (n = function () {
-					t.readyCallback()
-				}, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !
-					1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function () {
-					"complete" === a.readyState && t.readyCallback()
-				})), (n = t.source || {}).concatemoji ? c(n.concatemoji) : n.wpemoji && n.twemoji && (c(n.twemoji), c(n
-					.wpemoji)))
-		}(window, document, window._wpemojiSettings);
-	</script>
 	<style type="text/css">
 		img.wp-smiley,
 		img.emoji {
@@ -92,7 +30,7 @@
 		@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,700;1,200&display=swap');
 		body, p {
 			font-family: 'Montserrat', sans-serif;
-			font-size: 15px; !important;
+			/*font-size: 15px; !important;*/
 			color: white !important;
 		}
 
@@ -185,7 +123,7 @@
 
 		.form-group label {
 			color: white !important;
-			font-size: 18px;
+			/*font-size: 18px;*/
 			font-family: "Montserrat", sans-serif;
 			font-weight: 400 !important;
 		}
@@ -201,6 +139,29 @@
 			padding: 15px !important;
 			height: 45px !important;
 			/* font-family: 'Helvetica' !important; */
+		}
+
+		.form-control {
+			box-shadow: 2px 2px 3px 1px rgba(252, 180, 176, 0.5) !important;
+		}
+
+		label.error {
+			background: red;
+			padding: 2px;
+			border: 1px solid red;
+			border-radius: 30px;
+			margin: 7px;
+			font-size: 12px;
+		}
+
+		input.error {
+			border: 3px solid red !important;
+			box-shadow: 0 1px 3px 0 rgba(255, 0, 0, 0.5) !important;
+		}
+
+		input.valid {
+			border: 3px solid green !important;
+			box-shadow: 0 1px 3px 0 rgba(0, 255, 0, 0.5) !important;
 		}
 
 		@-webkit-keyframes treat-enter {
@@ -276,19 +237,11 @@
 	<script type='text/javascript' src='wp-includes/js/jquery/jquery.minaf6c.js?ver=3.6.0' id='jquery-core-js'></script>
 	<script type='text/javascript' src='wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2'
 		id='jquery-migrate-js'></script>
-	<link rel="https://api.w.org/" href="wp-json/index.html" />
-	<link rel="alternate" type="application/json" href="wp-json/wp/v2/pages/13710.json" />
-	<link rel="canonical" href="index.html" />
-	<link rel='shortlink' href='index25cc.html?p=13710' />
-	<link rel="alternate" type="application/json+oembed"
-		href="wp-json/oembed/1.0/embed36e0.json?url=https%3A%2F%2Fwww.jasmtsc.in%2Ftaaruf%2F" />
-	<link rel="alternate" type="text/xml+oembed"
-		href="wp-json/oembed/1.0/embed7d10?url=https%3A%2F%2Fwww.jasmtsc.in%2Ftaaruf%2F&amp;format=xml" />
 	<link rel="shortcut Icon" href="wp-content/uploads/2021/10/logo-1-1.png" />
 	<link rel="apple-touch-icon" sizes="180x180" href="wp-content/uploads/2021/10/logo-1-1.png" />
 	<link rel="icon" type="image/png" sizes="32x32" href="wp-content/uploads/2021/10/logo-1-1.png" />
 	<link rel="icon" type="image/png" sizes="16x16" href="wp-content/uploads/2021/10/logo-1-1.png" />
-	<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress." />
+	<link rel="stylesheet" type="text/css" href="css/loader.css">
 	<style type="text/css" data-type="vc_shortcodes-custom-css">
 		.vc_custom_1634728721912 {
 			padding-top: 80px !important;
@@ -322,6 +275,7 @@
 <body class="page-template-default page page-id-13710 wpb-js-composer js-comp-ver-6.7.0 vc_responsive" style="">
 	<div class="pix-page-loading-bg"></div>
 	<div class="pix-loading-circ-path"></div>
+	<div id="cover-spin"></div>
 	<div id="page" class="site bg-white">
 		<div id="content" class="site-content bg-gray-1 " style="">
 			<div class="container">
@@ -367,7 +321,7 @@
 																			src="wp-content/uploads/2021/10/moments_logo-300x300.png"
 																			class="vc_single_image-img attachment-medium"
 																			alt="" loading="lazy"
-																			srcset="https://www.jasmtsc.in/wp-content/uploads/2021/10/moments_logo-300x300.png 300w, https://www.jasmtsc.in/wp-content/uploads/2021/10/moments_logo-1024x1024.png 1024w, https://www.jasmtsc.in/wp-content/uploads/2021/10/moments_logo-150x150.png 150w, https://www.jasmtsc.in/wp-content/uploads/2021/10/moments_logo-768x768.png 768w, https://www.jasmtsc.in/wp-content/uploads/2021/10/moments_logo-1536x1536.png 1536w, https://www.jasmtsc.in/wp-content/uploads/2021/10/moments_logo-2048x2048.png 2048w, https://www.jasmtsc.in/wp-content/uploads/2021/10/moments_logo-400x400.png 400w, https://www.jasmtsc.in/wp-content/uploads/2021/10/moments_logo-75x75.png 75w, https://www.jasmtsc.in/wp-content/uploads/2021/10/moments_logo-460x460.png 460w"
+																			srcset="wp-content/uploads/2021/10/moments_logo-300x300.png 300w, wp-content/uploads/2021/10/moments_logo-300x300.png 1024w, wp-content/uploads/2021/10/moments_logo-300x300.png 150w, wp-content/uploads/2021/10/moments_logo-300x300.png 768w, wp-content/uploads/2021/10/moments_logo-300x300.png 1536w, wp-content/uploads/2021/10/moments_logo-300x300.png 2048w, wp-content/uploads/2021/10/moments_logo-300x300.png 400w, wp-content/uploads/2021/10/moments_logo-300x300.png 75w, wp-content/uploads/2021/10/moments_logo-300x300.png 460w"
 																			sizes="(max-width: 300px) 100vw, 300px" />
 																	</div>
 																</figure>
@@ -386,13 +340,6 @@
 																		data-anim-delay="400"
 																		data-anim-type="fade-in-up">A unique event for the alumni of MSB by HSB Rajkot under the auspices of ITNC Mumbai.</span></p>
 															</div>
-															<!-- <div class="pix-el-text slide-in-container w-100  ">
-																<p class="text-24  text-white  "><span
-																		class="animate-in d-inline-block"
-																		data-anim-delay="400"
-																		data-anim-type="fade-in-up">Kindly register at attaiseerulburhani (if you have not registered ever before) and then register for this upcoming event using the HSB Taaruf Programme Tab.</span>
-																</p>
-															</div> -->
 															<div class="row mt-3">
 																<div class="col-lg-8 col-md-12 col-sm-12 justify-content-center">
 																	<p style="font-weight: bold; font-size: 16px;margin: 0; margin-top: 3px;">HAPPENING ON</p>
@@ -421,8 +368,6 @@
 																									src="wp-content/uploads/2021/10/3-2.png"
 																									class="vc_single_image-img attachment-large"
 																									alt="" loading="lazy"
-																									srcset="https://www.jasmtsc.in/wp-content/uploads/2021/10/3-2.png 300w, https://www.jasmtsc.in/wp-content/uploads/2021/10/3-2-150x150.png 150w, https://www.jasmtsc.in/wp-content/uploads/2021/10/3-2-75x75.png 75w"
-																									sizes="(max-width: 300px) 100vw, 300px"
 																									style="max-width: 75%;" /></div>
 																						</figure>
 																					</div>
@@ -441,8 +386,6 @@
 																									src="wp-content/uploads/2021/10/1-2.png"
 																									class="vc_single_image-img attachment-large"
 																									alt="" loading="lazy"
-																									srcset="https://www.jasmtsc.in/wp-content/uploads/2021/10/1-2.png 300w, https://www.jasmtsc.in/wp-content/uploads/2021/10/1-2-150x150.png 150w, https://www.jasmtsc.in/wp-content/uploads/2021/10/1-2-75x75.png 75w"
-																									sizes="(max-width: 300px) 100vw, 300px"
 																									style="max-width: 75%;" /></div>
 																						</figure>
 																					</div>
@@ -461,8 +404,6 @@
 																									src="wp-content/uploads/2021/10/2-2.png"
 																									class="vc_single_image-img attachment-large"
 																									alt="" loading="lazy"
-																									srcset="https://www.jasmtsc.in/wp-content/uploads/2021/10/2-2.png 300w, https://www.jasmtsc.in/wp-content/uploads/2021/10/2-2-150x150.png 150w, https://www.jasmtsc.in/wp-content/uploads/2021/10/2-2-75x75.png 75w"
-																									sizes="(max-width: 300px) 100vw, 300px"
 																									style="max-width: 75%;" /></div>
 																						</figure>
 																					</div>
@@ -473,15 +414,18 @@
 																</div>
 																
 																<div class="col-lg-4 col-md-12 col-sm-12">
-																	<form>
+																	<form class="needs-validation" id="reg_form" novalidate>
 																		<div class="form-group">
 																			<label for="its_number">ITS Number</label>
 																			<input type="text" class="form-control" id="its_number" name="its_number" placeholder="Enter ITS Number">
+																			<div class="invalid-feedback">
+																		        Please provide a valid city.
+																		    </div>
 																		</div>
 
 																		<div class="form-group">
 																			<label for="email_address">Email Address</label>
-																			<input type="text" class="form-control" id="email_address" name="email_address" placeholder="Enter Email Address">
+																			<input type="email" class="form-control" id="email_address" name="email_address" placeholder="Enter Email Address">
 																		</div>
 
 																		<div class="form-group">
@@ -530,99 +474,12 @@
 																		
 																	</form>
 																</div>
-																<!-- <div class="col-md-6">
-																	<div class="treat-wrapper mb-1">
-																		<button onclick="gotohsbprogramme()"
-																			class="treat-button">HSB Taaruf
-																			Programme</button>
-																	</div>
-																</div>
-																<div class="col-md-6">
-																	<div class="treat-wrapper mb-1">
-																		<button onclick="gotoattaisir()"
-																			class="treat-button">Attaisur ul
-																			Burhani</button>
-																	</div>
-																</div> -->
 															</div>
 															<!-- <a  href="#" class="btn mb-2     shadow-sm text-white btn-gray-8 d-inline-block pix-hover-item       animate-in btn-lg"   data-anim-type="fade-in-left" data-anim-delay="600" ><i class="font-weight-bold pixicon-user-3  pix-hover-left  mr-1"></i> <span class="font-weight-bold " >ATTAISUR UL BURHANI</span></a><a  href="#" class="btn mb-2     text-heading-default btn-white d-inline-block pix-hover-item       animate-in btn-lg"   data-anim-type="fade-in-left" data-anim-delay="800" ><i class="font-weight-bold pixicon-phone  pix-hover-left  mr-1"></i> <span class="font-weight-bold " >HSB TAARUF PROGRAMME</span></a> -->
 														</div>
 													</div>
 												</div>
 											</div>
-											<!-- <div class="vc_row wpb_row vc_row-fluid vc_row_visible">
-                                       <div class="wpb_column vc_column_container vc_col-sm-12 text-left">
-                                          <div class="vc_column-inner">
-                                             <div class="wpb_wrapper">
-                                                <div class="vc_empty_space"   style="height: 32px"><span class="vc_empty_space_inner"></span></div>
-                                                <div class="vc_empty_space"   style="height: 32px"><span class="vc_empty_space_inner"></span></div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div> -->
-											<!-- <div
-												class="vc_row wpb_row vc_row-fluid vc_row_visible vc_custom_1634730090325">
-												<div class="wpb_column vc_column_container vc_col-sm-4 text-left">
-													<div class="vc_column-inner">
-														<div class="wpb_wrapper">
-															<div
-																class="wpb_single_image wpb_content_element vc_align_center">
-																<figure class="wpb_wrapper vc_figure">
-																	<div
-																		class="vc_single_image-wrapper   vc_box_border_grey">
-																		<img width="300" height="300"
-																			src="wp-content/uploads/2021/10/3-2.png"
-																			class="vc_single_image-img attachment-large"
-																			alt="" loading="lazy"
-																			srcset="https://www.jasmtsc.in/wp-content/uploads/2021/10/3-2.png 300w, https://www.jasmtsc.in/wp-content/uploads/2021/10/3-2-150x150.png 150w, https://www.jasmtsc.in/wp-content/uploads/2021/10/3-2-75x75.png 75w"
-																			sizes="(max-width: 300px) 100vw, 300px"
-																			style="max-width: 75%;" /></div>
-																</figure>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="wpb_column vc_column_container vc_col-sm-4 text-left">
-													<div class="vc_column-inner">
-														<div class="wpb_wrapper">
-															<div
-																class="wpb_single_image wpb_content_element vc_align_center">
-																<figure class="wpb_wrapper vc_figure">
-																	<div
-																		class="vc_single_image-wrapper   vc_box_border_grey">
-																		<img width="300" height="300"
-																			src="wp-content/uploads/2021/10/1-2.png"
-																			class="vc_single_image-img attachment-large"
-																			alt="" loading="lazy"
-																			srcset="https://www.jasmtsc.in/wp-content/uploads/2021/10/1-2.png 300w, https://www.jasmtsc.in/wp-content/uploads/2021/10/1-2-150x150.png 150w, https://www.jasmtsc.in/wp-content/uploads/2021/10/1-2-75x75.png 75w"
-																			sizes="(max-width: 300px) 100vw, 300px"
-																			style="max-width: 75%;" /></div>
-																</figure>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="wpb_column vc_column_container vc_col-sm-4 text-left">
-													<div class="vc_column-inner">
-														<div class="wpb_wrapper">
-															<div
-																class="wpb_single_image wpb_content_element vc_align_center">
-																<figure class="wpb_wrapper vc_figure">
-																	<div
-																		class="vc_single_image-wrapper   vc_box_border_grey">
-																		<img width="300" height="300"
-																			src="wp-content/uploads/2021/10/2-2.png"
-																			class="vc_single_image-img attachment-large"
-																			alt="" loading="lazy"
-																			srcset="https://www.jasmtsc.in/wp-content/uploads/2021/10/2-2.png 300w, https://www.jasmtsc.in/wp-content/uploads/2021/10/2-2-150x150.png 150w, https://www.jasmtsc.in/wp-content/uploads/2021/10/2-2-75x75.png 75w"
-																			sizes="(max-width: 300px) 100vw, 300px"
-																			style="max-width: 75%;" /></div>
-																</figure>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div> -->
 											<div class="vc_row wpb_row vc_row-fluid vc_row_visible">
 												<div class="wpb_column vc_column_container vc_col-sm-12 text-left">
 													<div class="vc_column-inner">
@@ -684,53 +541,6 @@
 		<path class="shape-overlays__path" d="" fill="url(#search-overlay-color-2)"></path>
 		<path class="shape-overlays__path" d="" fill="url(#search-overlay-color-1)"></path>
 	</svg>
-	<div class="pix-overlay d-none">
-		<div class="">
-			<div class="pix-search ">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="col-12 col-md-12">
-							<div class="pix-overlay-item pix-overlay-item--style-6">
-								<a href="#" class="pix-search-close"><span
-										class="screen-reader-text sr-only">Close</span><i
-										class=" pixicon-close-circle"></i></a>
-								<div class="pb-0">
-									<div
-										class="search-title h1 heading-font display-2 text-gradient-primary2 text-white font-weight-bold">
-										Search</div>
-								</div>
-							</div>
-							<div class="slide-in-container pb-2 pix-overlay-item pix-overlay-item--style-6">
-								<p class="text-gray-3s text-20 mb-2 secondary-font search-note">Hit enter to search or
-									ESC to close</p>
-							</div>
-							<div class="search-bar pix-overlay-item pix-overlay-item--style-6">
-								<div class="search-content">
-									<form class="pix-search-form" method="get" action="https://www.jasmtsc.in/">
-										<div class="media pix-ajax-search-container">
-											<button class="pix-search-submit align-self-center" aria-label="search"
-												type="submit"><i class="pixicon-search"></i></button>
-											<div class="media-body">
-												<label class="w-100 m-0">
-													<span class="screen-reader-text sr-only">Search for:</span>
-													<input value="" name="s" id="s"
-														class="pix-search-input pix-ajax-search" type="search"
-														autocomplete="off" placeholder="Search"
-														data-search-link="https://www.jasmtsc.in/wp-admin/admin-ajax.php?action=pix_ajax_searcht&#038;nonce=6addb00e01" />
-												</label>
-											</div>
-										</div>
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<a href="#" class="shadow shadow-hover rounded-circle fly bg-gray-2 back_to_top default" title="Go to top"><i
-			class="pixicon-angle-up"></i></a>
 	<div class="d-flex">
 		<svg width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg">
 			<defs>
@@ -834,35 +644,10 @@
 			}
 		}
 	</style>
-	<link rel='stylesheet' id='pixfort-likes-css'
 		href='wp-content/plugins/pixfort-likes/styles/pixfort-likesf658.css?ver=5.8.1' type='text/css' media='all' />
 	<link rel='stylesheet' id='pixfort-likes-odometer-css'
 		href='wp-content/plugins/pixfort-likes/styles/odometer-theme-defaultf658.css?ver=5.8.1' type='text/css'
 		media='all' />
-	<link rel='stylesheet' id='wpb-google-font-primary-css'
-		href='https://fonts.googleapis.com/css?family=Manrope%3A400%2C700&amp;display=swap&amp;ver=5.8.1'
-		type='text/css' media='all' />
-	<link rel='stylesheet' id='wpb-google-font-secondary-css'
-		href='https://fonts.googleapis.com/css?family=Poppins%3A400%2C700&amp;display=swap&amp;ver=5.8.1'
-		type='text/css' media='all' />
-	<script type='text/javascript' id='ht_ctc_app_js-js-extra'>
-		/* <![CDATA[ */
-		var ht_ctc_chat_var = {
-			"number": "919624922153",
-			"pre_filled": "Hello HSB!!!\r\nI have some query regarding Taaruf programme.",
-			"dis_m": "show",
-			"dis_d": "show",
-			"css": "display: none; cursor: pointer; z-index: 99999999;",
-			"pos_d": "position: fixed; bottom: 20px; right: 20px;",
-			"pos_m": "position: fixed; bottom: 20px; right: 20px;",
-			"schedule": "no",
-			"se": "150",
-			"ani": "no-animations",
-			"ga": "yes",
-			"fb": "yes"
-		};
-		/* ]]> */
-	</script>
 	<script type='text/javascript'
 		src='wp-content/plugins/click-to-chat-for-whatsapp/new/inc/assets/js/332.app9d52.js?ver=3.5.1'
 		id='ht_ctc_app_js-js'></script>
@@ -892,19 +677,6 @@
 		id='pix-flickity-js-js'></script>
 	<script type='text/javascript' src='wp-includes/js/jquery/ui/core.min35d0.js?ver=1.12.1' id='jquery-ui-core-js'>
 	</script>
-	<script type='text/javascript' id='pix-main-essentials-js-extra'>
-		/* <![CDATA[ */
-		var pixfort_main_object = {
-			"name": "mainVals",
-			"dataPopupBase": "https:\/\/www.jasmtsc.in\/wp-admin\/admin-ajax.php?action=pix_popup_content",
-			"dataPixOverlay": "pix-overlay-2",
-			"dataPopupCheckLink": "https:\/\/www.jasmtsc.in\/wp-admin\/admin-ajax.php?action=pix_check_popup_status&nonce=926194c822",
-			"lightboxUrl": "https:\/\/www.jasmtsc.in\/wp-content\/themes\/essentials\/js\/build\/jquery.fancybox.min.js",
-			"isotopeUrl": "https:\/\/www.jasmtsc.in\/wp-content\/themes\/essentials\/js\/build\/isotope.pkgd.min.js",
-			"searchUrl": "https:\/\/www.jasmtsc.in\/wp-content\/themes\/essentials\/js\/build\/bootstrap-autocomplete.min.js"
-		};
-		/* ]]> */
-	</script>
 	<script type='text/javascript' src='wp-content/themes/essentials/js/essentials.minc1b4.js?ver=2.0.5'
 		id='pix-main-essentials-js'></script>
 	<script type='text/javascript' src='wp-includes/js/wp-embed.minf658.js?ver=5.8.1' id='wp-embed-js'></script>
@@ -913,15 +685,10 @@
 		id='wpb_composer_front_js-js'></script>
 	<script type='text/javascript' src='wp-content/plugins/pixfort-likes/scripts/odometer.min20b9.js?ver=1.0.2'
 		id='pixfort-likes-digit-js'></script>
-	<script type='text/javascript' id='pixfort-likes-js-extra'>
-		/* <![CDATA[ */
-		var pixfort_likes = {
-			"ajaxurl": "https:\/\/www.jasmtsc.in\/wp-admin\/admin-ajax.php"
-		};
-		/* ]]> */
-	</script>
 	<script type='text/javascript' src='wp-content/plugins/pixfort-likes/scripts/pixfort-likes20b9.js?ver=1.0.2'
 		id='pixfort-likes-js'></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
 	<script>
 		function gotoattaisir() {
 			window.open(
@@ -932,6 +699,61 @@
 		function gotohsbprogramme() {
 			window.open("https://tms.itnc.info/hsb2021/candidate_register")
 		}
+
+		function ajaxSubmit () {
+			$.ajax ({
+				url: 'http://taaruf-backend.test/api/candidate/register',
+				method: 'post',
+				data: {
+					its_number: $("#its_number").val(),
+					email_address: $("#email_address").val(),
+					mobile_number: $("#mobile_number").val(),
+					msb_location: $("#farig_msb_location").val(),
+					batch_year: $("#batch_year").val()
+				},
+				dataType: 'JSON',
+				beforeSend: function () {
+					showLoader();
+				},
+				complete: function () {
+					hideLoader();
+				},
+				success: function (response) {
+					console.log (response)
+				}
+			})
+		}
+
+		jQuery.validator.addMethod("length", function(value, element, param) {
+ 			return this.optional(element) || value.length == param;
+		}, $.validator.format("Please enter exactly {0} characters."));
+
+		var validator =	$("#reg_form").validate({
+			rules: {
+				its_number: {
+					required: true,
+					length: 8,
+					digits: true
+				},
+				email_address: {
+					required: true,
+					email: true
+				},
+				mobile_number: {
+					required: true,
+					minlength: 10,
+				}
+			}
+		});
+
+		$(function(){
+			$("#reg_form").on("submit", function(e){
+				e.preventDefault();
+				if (validator.form()) {
+					ajaxSubmit();
+				}
+			});
+		});
 	</script>
 </body>
 
