@@ -418,22 +418,19 @@
 																		<div class="form-group">
 																			<label for="its_number">ITS Number</label>
 																			<input type="text" class="form-control" id="its_number" name="its_number" placeholder="Enter ITS Number">
-																			<div class="invalid-feedback">
-																		        Please provide a valid city.
-																		    </div>
 																		</div>
 
-																		<div class="form-group">
+																		<div class="form-group other-fields">
 																			<label for="email_address">Email Address</label>
 																			<input type="email" class="form-control" id="email_address" name="email_address" placeholder="Enter Email Address">
 																		</div>
 
-																		<div class="form-group">
+																		<div class="form-group other-fields">
 																			<label for="mobile_number">Mobile Number</label>
 																			<input type="text" class="form-control" id="mobile_number" name="mobile_number" placeholder="Enter Mobile Number">
 																		</div>
 
-																		<div class="form-group">
+																		<div class="form-group other-fields">
 																			<label for="farig_msb_location">Farig MSB Location</label>
 																			<select class="custom-select" id="farig_msb_location" name="farig_msb_location" style="font-family: 'Helvetica';border: 3px solid #fcb4b0;border-radius: 30px;height: 45px;">
 																				<option value="Banglore">Banglore</option>
@@ -453,7 +450,7 @@
 																			</select>
 																		</div>
 
-																		<div class="form-group">
+																		<div class="form-group other-fields">
 																			<label for="Batch Year">Batch Year</label>
 																			<select class="custom-select" id="batch_year" name="batch_year" style="font-family: 'Helvetica';border: 3px solid #fcb4b0;border-radius: 30px;height: 45px;">
 																				<option value="2010">2010</option>
@@ -475,7 +472,6 @@
 																	</form>
 																</div>
 															</div>
-															<!-- <a  href="#" class="btn mb-2     shadow-sm text-white btn-gray-8 d-inline-block pix-hover-item       animate-in btn-lg"   data-anim-type="fade-in-left" data-anim-delay="600" ><i class="font-weight-bold pixicon-user-3  pix-hover-left  mr-1"></i> <span class="font-weight-bold " >ATTAISUR UL BURHANI</span></a><a  href="#" class="btn mb-2     text-heading-default btn-white d-inline-block pix-hover-item       animate-in btn-lg"   data-anim-type="fade-in-left" data-anim-delay="800" ><i class="font-weight-bold pixicon-phone  pix-hover-left  mr-1"></i> <span class="font-weight-bold " >HSB TAARUF PROGRAMME</span></a> -->
 														</div>
 													</div>
 												</div>
@@ -687,8 +683,11 @@
 	<script type='text/javascript' src='wp-content/plugins/pixfort-likes/scripts/pixfort-likes20b9.js?ver=1.0.2'
 		id='pixfort-likes-js'></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script type="text/javascript" src="js/common.js"></script>
 	<script>
+		var ajaxUrl = "";
+
 		function gotoattaisir() {
 			window.open(
 				"https://www.attaiseerulburhani.com/pl/candidate/pl_candidate_000_candidate_registration_0_ejamaat_landing.php?action=online_registration"
@@ -701,7 +700,7 @@
 
 		function ajaxSubmit () {
 			$.ajax ({
-				url: 'http://taaruf-backend.test/api/candidate/register',
+				url: ajaxUrl,
 				method: 'post',
 				data: {
 					its_number: $("#its_number").val(),
@@ -718,7 +717,63 @@
 					hideLoader();
 				},
 				success: function (response) {
-					console.log (response)
+					if (response.candidatestatus == 0 || response.candidatestatus == 1) {
+						Swal.fire({
+						  	icon: 'warning',
+						  	title: 'Oops! Your registration is incomplete!',
+						  	text: 'You are currently not registered on Attaiseerul Burhani! Kindly register yourself there and comeback here to continue your registration process for Moments - HSB Taaruf Programme.',
+						  	footer: '<a href="https://wa.me/919624922153?text=Hello%20HSB!!!%0D%0AI%20am%20not%20able%20to%20register%20for%20HSB%20Taaruf%20Programme.%20It%20is%20asking%20me%20to%20first%20register%20on%20Attaiseerul%20Burhani?%20I%20need%20some%20help%20regarding%20this." target="_blank">Why do I have this issue?</a>',
+						  	confirmButtonText: "Take me to Attaiseerul Burhani!"
+						})
+						.then ((result) => {
+							if (result.isConfirmed) {
+								window.location.href = "https://www.attaiseerulburhani.com/pl/candidate/pl_candidate_000_candidate_registration_0_ejamaat_landing.php?action=online_registration";
+							}
+						})
+					} else if (response.candidatestatus >= 2 && response.candidatestatus <= 14) {
+						Swal.fire({
+						  	icon: 'success',
+						  	title: 'Yay...',
+						  	text: 'Superb! We see you have already registered on Attaiseerul Burhani. Kindly proceed further to complete your registration process.',
+						  	footer: '<a href="https://wa.me/919624922153?text=Hello%20HSB!!!%0D%0AI%20have%20some%20issue%20to%20in%20registration%20process.%20I%20need%20some%20help%20regarding%20this." target="_blank">I need some help.</a>',
+						  	confirmButtonText: "Proceed further!"
+						})
+						.then ((result) => {
+							if (result.isConfirmed) {
+								window.location.href = "https://tms.itnc.info/hsb2021/candidate_register";
+							}
+						})
+					} else {
+						Swal.fire({
+						  	icon: 'error',
+						  	title: 'Oops...',
+						  	text: 'Sorry! We see you are not eligible for this event.',
+						  	confirmButtonText: "It's okay!"
+						})
+						.then ((result) => {
+							window.location.reload();
+						})
+					}
+				},
+				error: function (response) {
+					if (response.responseJSON.type === "check-status") {
+						if ((response.responseJSON.candidatestatus != -1 && response.responseJSON.candidatestatus != 15) &&  response.responseJSON.message === "not registered") {
+							$(".other-fields").find("input").removeClass("ignore");
+							$(".other-fields").find("select").removeClass("ignore");
+							$(".other-fields").show();
+							ajaxUrl = 'http://taaruf-backend.test/api/candidate/register';
+						} else {
+							Swal.fire({
+							  	icon: 'error',
+							  	title: 'Oops...',
+							  	text: 'Sorry! We see you are not eligible for this event.',
+							  	confirmButtonText: "It's okay!"
+							})
+							.then ((result) => {
+								window.location.reload();
+							})
+						}
+					}
 				}
 			})
 		}
@@ -728,6 +783,7 @@
 		}, $.validator.format("Please enter exactly {0} characters."));
 
 		var validator =	$("#reg_form").validate({
+			ignore: ".ignore",
 			rules: {
 				its_number: {
 					required: true,
@@ -745,7 +801,11 @@
 			}
 		});
 
-		$(function(){
+		$(function() {
+			$(".other-fields").find("input").addClass("ignore");
+			$(".other-fields").find("select").addClass("ignore");
+			$(".other-fields").hide();
+			ajaxUrl = 'http://taaruf-backend.test/api/candidate/check-status';
 			$("#reg_form").on("submit", function(e){
 				e.preventDefault();
 				if (validator.form()) {
